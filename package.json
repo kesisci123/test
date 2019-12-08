@@ -1,0 +1,26 @@
+{
+  "name": "peerjs-test",
+  "version": "1.0.0",
+  "description": "\"# test\"",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kesisci123/test.git"
+  },
+  "engines":{
+    "node": "10.16.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kesisci123/test/issues"
+  },
+  "homepage": "https://github.com/kesisci123/test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
