@@ -4,14 +4,15 @@
   "description": "\"# test\"",
   "main": "index.js",
   "scripts": {
-    "start":"node ./server/server.js",
+    "start": "node ./server/server.js",
+    "auto":"nodemon ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kesisci123/test.git"
   },
-  "engines":{
+  "engines": {
     "node": "10.16.0"
   },
   "author": "",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/kesisci123/test#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
   }
 }
