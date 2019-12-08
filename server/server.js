@@ -15,6 +15,30 @@ let io = socketIo(server);
 io.on('connection', (socket) =>{
     console.log("A new user just connected.");
 
+    //To new joined user
+    socket.emit('newMessage',{
+        from:"Admin",
+        text:"Welcome to the chat app",
+        createdAt: new Date().getTime()
+    });
+
+    socket.broadcast.emit('newMessage',{
+        from:"Admin",
+        text:"New User Joined",
+        createdAt: new Date().getTime()
+    });
+   
+
+    socket.on('createMessage', (message)=>{
+        console.log("createMessage :",message);
+        io.emit('newMessagex',{
+            from: message.from,
+            text:message.text,
+            createdAt : new Date().getTime()
+        });
+       
+    });
+    
     socket.on('disconnect', () =>{
         console.log("The user just disconnected.");
     });
